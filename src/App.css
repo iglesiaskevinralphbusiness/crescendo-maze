@@ -1,0 +1,230 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  
+}
+.home-page,
+.admin-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/dg-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.game-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/dg-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.game-page.finished:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url("./assets/confetti.gif");
+  background-repeat: repeat;
+  background-size: cover;
+}
+#game-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+}
+.charSelectionList {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.charSelectionList li {
+  float: left;
+  list-style: none;
+  margin: 3px 20px 20px 3px;
+}
+.charSelectionImg {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.charSelectionImg.active {
+  outline: 2px solid #005ed3;
+  background-color: #0049ba54;
+  border-radius: 100%;
+}
+.charSelectionImg.adventurer02 img {
+  margin-left: -176px;
+}
+.charSelectionImg.elf img {
+  margin-left: -358px;
+}
+.charSelectionImg.mage img{
+  margin-left: -538px;
+}
+.charSelectionImg.queen img{
+  position: absolute;
+  top: -240px;
+}
+.charSelectionImg.knight img{
+  position: absolute;
+  top: -240px;
+  left: -176px;
+}
+.charSelectionImg.ranger img{
+  position: absolute;
+  top: -240px;
+  left: -358px;
+}
+.charSelectionImg.kid img{
+  position: absolute;
+  top: -240px;
+  left: -534px;
+}
+
+
+
+
+
+#game-content {
+  display: none;
+  border: 10px solid #26275f;
+  border-radius: 10px;
+}
+#game-content.started {
+  display: block;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 488px;
+  height: 680px;
+  margin: auto;
+  padding: 151px 72px 0 72px;
+  font-size: 24px;
+  background-image: url("./assets/home-bg.png");
+  font-family: "Montebello";
+}
+.home > p {
+  font-weight: bold;
+  text-align: center;
+}
+.home input {
+  padding: 10px 15px;
+  font-size: 24px;
+  text-align: center;
+}
+.home .char-selection-blk {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.home .char-selection-blk > div {
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff54;
+  border-radius: 17px;
+}
+.home .char-selection-blk > div p {
+  padding: 0;
+  margin-top: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.home .char-button-blk {
+  text-align: center;
+}
+.home .char-button-blk button {
+  width: 255px;
+  height: 128px;
+  background-image: url("./assets/play-btn.png");
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  margin: auto;
+}
+.home .char-button-blk button:hover {
+  opacity: 0.6;
+}
+
+.users {
+  width: 523px;
+  height: 670px;
+  margin: 0 auto;
+  padding: 160px 55px 0 55px;
+  font-size: 24px;
+  background-image: url("./assets/players-bg.png");
+  font-family: "Montebello";
+}
+.users table {
+  width: 100%;
+}
+.users table,
+.users table tr,
+.users table tr {
+  border: none;
+}
+.users table thead {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.users table tbody {
+  font-weight: bold;
+  font-size: 20px;
+}
+.users table .users-no {
+  text-align: center;
+}
+.users table .users-username {
+  color: #fff;
+}
+.users table .users-location {
+  text-align: center;
+  color: #fff;
+}
+.users table .users-status {
+  text-align: center;
+}
+.users table .waiting {
+  color: #FFEB3B;
+  text-align: center;
+}
+.users table .playing {
+  color: #3311b5;
+  text-align: center;
+}
+.users table .finished {
+  color: #c4fd82;
+  text-align: center;
+}
+.users table tbody .users-location {
+  font-size: 14px;
+  text-wrap: balance;
+  max-width: 77px;
+}
+.users table tbody .users-username {
+  max-width: 80px;
+}
+
+.admin-button-blk {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
