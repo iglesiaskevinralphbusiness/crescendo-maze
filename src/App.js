@@ -6,8 +6,9 @@ import Home from './pages/Home';
 import Game from './pages/Game';
 import Admin from './pages/Admin';
 
-const socket = io.connect('https://crescendo-maze-socket.onrender.com');
-//const socket = io.connect('http://localhost:4000');
+const socket = io.connect('https://crescendo-maze-socket-server.onrender.com');
+// const socket = io.connect('https://crescendo-maze-socket.onrender.com');
+// const socket = io.connect('http://localhost:4000');
 
 function App() {
   const [username, setUsername] = useState('');
